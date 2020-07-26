@@ -3,16 +3,7 @@
   color: white;
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.lazyload--app {
-  background: #461a42;
-  color: white;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
@@ -154,6 +145,4 @@ input[type="number"] {
 .footer--quotes a {
   text-decoration: none;
   margin: 0px 5px;
-  display: flex;
-  align-items: center;
 }
