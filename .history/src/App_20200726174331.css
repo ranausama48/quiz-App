@@ -1,0 +1,137 @@
+.app {
+  background: #461a42;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lazy--heading {
+  margin: 0px;
+  text-align: center;
+  line-height: 0px;
+}
+.app h1 {
+  font-size: 45px;
+  text-align: center;
+}
+.inner--wraper {
+  max-width: 500px;
+  margin: 0px 10px;
+}
+.inner--wraper ::placeholder {
+  color: white;
+}
+.inner--wraper > select > option {
+  color: black;
+  font-weight: 500;
+}
+.inner--wraper > select {
+  text-align-last: center;
+}
+
+.inner--wraper > select,
+.inner--wraper > input,
+.inner--wraper > button {
+  width: 100% !important;
+  border: 0px;
+  outline: none;
+  border-radius: 5px;
+  padding: 0px;
+  height: 50px;
+  text-align: center;
+  margin: 5px 0px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.inner--wraper button {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px auto;
+  display: block;
+
+  width: 30% !important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.question--container input {
+  cursor: pointer;
+}
+.quiz--dash {
+  color: #461a42;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 16px;
+  margin: 16px;
+  max-width: 800px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.submit--button,
+.score--page button {
+  background: #461a42;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+.quiz--dash ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.quiz--dash label {
+  flex: 1 0 50%;
+  margin: 5px 0px;
+  color: #461a42;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.score--page {
+  color: #461a42;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 16px;
+  margin: 16px;
+  max-width: 800px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.score--page .fail {
+  color: red !important;
+}
+.score--page .success {
+  color: green !important;
+}
+.score--page .percentage--row {
+  display: flex;
+  justify-content: space-evenly;
+}
+.score--page .percentage--row span {
+  font-size: 30px;
+  font-weight: bold;
+}
+.score--page .percentage--box {
+  background: #461a42;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+}

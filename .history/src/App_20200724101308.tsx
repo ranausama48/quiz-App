@@ -1,0 +1,56 @@
+import React from "react";
+import { getApiData } from "./api/api";
+import { OverallQuiz, SingleQuestion } from "./Types/quiz_types";
+import QuestionCard from "./components/QuestionCard";
+
+function App() {
+  const [quiz, setQuiz] = React.useState<SingleQuestion[]>([]);
+  let [currentQues, setCurrentQues] = React.useState(0);
+  let [userSelectAns, setUserSelectAns] = React.useState("");
+  let [score, setScore] = React.useState(0);
+  React.useEffect(() => {
+    async function fetchData() {
+      const questions: SingleQuestion[] = await getApiData(5, "easy");
+      console.log(questions);
+      setQuiz(questions);
+    }
+    fetchData();
+  }, []);
+
+  const nextHanlder = (e: React.FormEvent<EventTarget>) => {
+    e.preventDefault();
+    let AnserStore = quiz[currentQues].answer;
+    console.log(AnserStore);
+    if (userSelectAns === AnserStore) {
+      setScore(++score);
+    }
+    if (currentQues !== quiz.length - 1) {
+      setCurrentQues(++currentQues);
+    } else {
+      alert("Quiz Completed");
+      setCurrentQues(0);
+      setScore(0);
+    }
+  };
+  const changeHandler = (e: any) => {
+    const value = e.target.value;
+    setUserSelectAns(value);
+  };
+
+  if (!quiz.length) return <div>Loading....</div>;
+  return (
+    <div className="app">
+      {score}
+      {console.log("score", score)}
+      <QuestionCard
+        score={score}
+        nextHanlder={nextHanlder}
+        changeHandler={() => changeHandler(userSelectAns)}
+        option={quiz[currentQues].option}
+        question={quiz[currentQues].question}
+      />
+    </div>
+  );
+}
+
+export default App;

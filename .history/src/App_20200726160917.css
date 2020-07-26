@@ -1,0 +1,55 @@
+.app {
+  background: #461a42;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app h1 {
+  font-size: 45px;
+  text-align: center;
+}
+.inner--wraper {
+  max-width: 500px;
+}
+.inner--wraper ::placeholder {
+  color: white;
+}
+.inner--wraper > select > option {
+  color: black;
+  font-weight: 500;
+}
+.inner--wraper > select {
+  text-align-last: center;
+}
+.inner--wraper > select,
+.inner--wraper > input,
+.inner--wraper > button {
+  width: 100% !important;
+  border: 0px;
+  outline: none;
+  border-radius: 5px;
+  padding: 0px;
+  height: 50px;
+  text-align: center;
+  margin: 5px 0px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.inner--wraper button {
+  font-weight: bold;
+  font-size: 25px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
