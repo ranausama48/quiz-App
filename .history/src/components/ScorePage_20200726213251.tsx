@@ -2,7 +2,7 @@ import React from "react";
 import App from "../App";
 const ScorePage = (props: { score: number; totalNumber: number }) => {
   const [state, setState] = React.useState<boolean>(false);
-  const percentageScore = (props.score / props.totalNumber) * 100;
+  const percentageScore = ((props.score / props.totalNumber) * 100).toFixed(2);
 
   if (state === true) return <App />;
   else
@@ -17,9 +17,7 @@ const ScorePage = (props: { score: number; totalNumber: number }) => {
 
             <div className="percentage--row">
               <span>Percentage</span>
-              <div className="percentage--box">
-                {percentageScore.toFixed(2)} %
-              </div>
+              <div className="percentage--box">{percentageScore} %</div>
             </div>
 
             {percentageScore < 33.33 ? (

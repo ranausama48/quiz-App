@@ -17,9 +17,7 @@ const ScorePage = (props: { score: number; totalNumber: number }) => {
 
             <div className="percentage--row">
               <span>Percentage</span>
-              <div className="percentage--box">
-                {percentageScore.toFixed(2)} %
-              </div>
+              <div className="percentage--box">{percentageScore} %</div>
             </div>
 
             {percentageScore < 33.33 ? (
